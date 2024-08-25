@@ -28,5 +28,5 @@ typewriter({
 typewriter({
   element: h3Element,
   text: 'Um novo conceito em Barbearia',
-  delay: 200,
+  delay: 115,
 });

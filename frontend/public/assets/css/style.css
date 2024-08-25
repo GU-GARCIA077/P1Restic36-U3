@@ -4,6 +4,18 @@ body {
     font-family: Arial, sans-serif;
     background-color:#825280 ; /* Cor de fundo para combinar com a imagem */
 }
+::-webkit-scrollbar {
+    width:15px;
+    height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+    background:linear-gradient(45deg,#4b204b, white);
+    }
+    ::-webkit-scrollbar-thumb {
+    background:linear-gradient(45deg,white ,#825280);
+    border:1px solid #4b204b;
+    border-radius: 10px;
+    }
 
 .header {
     background-color: #4b204b;
@@ -88,9 +100,117 @@ h3{
 .user-actions img {
     width: 25px; /* Ajuste o tamanho conforme necessário */
 }
+.sobreUs{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.nos , .imgcol{
+    flex: 1;
+    min-width:200px ;
+    max-width: 30%;
+    text-align: center;
+}
+.nos {
+    max-width: 40%; 
+}
+.imgcol img {
+    max-width: 100%;
+    height: auto; 
+}
 
+.nos p  {
+    text-align: justify;
+    
+}
+
+.central{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#mapa{
+    width: 80%;
+    height: 350px;
+    border-radius:5px ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#gmaps{
+    min-width:600px; 
+    height:350px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; 
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    flex: 1 1 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.card h5 {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+.price {
+    padding: 15px;
+    background-color:#4b204b;
+    border-top: 1px solid #ddd;
+}
+.logoR img {
+    width: 250px;
+    height: 250px;
+}
 /* Responsividade */
 @media (max-width: 768px) {
+    .sobreUs {
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .imgcol, .nos {
+    max-width: 100%; 
+    }
     .Back h2 {
         font-size:70px ;
     }
@@ -104,9 +224,25 @@ h3{
     .user-actions a {
         font-size: 12px;
     }
+    #maps, #gmaps{
+        width: 500px;
+        height: 250px;
+    }
+    .card {
+        flex: 1 1 45%; 
+    }
+}
 }
 
 @media (max-width: 480px) {
+    .sobreUs {
+        flex-direction: column;
+        gap: 5px;
+        }
+    
+        .imgcol, .nos {
+        max-width: 100%; 
+        }
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -129,6 +265,13 @@ h3{
     }
     .Back h3{
         font-size: 20px;
+    }
+    #maps, #gmaps{
+        width: 200px;
+        height: 150px;
+    }
+    .card {
+        flex: 1 1 100%;
     }
 }
 
