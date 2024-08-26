@@ -36,6 +36,9 @@ body{
 .container span{
     font-size: 12px;
 }
+#voltar{
+    color: #fff;
+}
 .container a{
     color: #333;
     font-size: 13px;
